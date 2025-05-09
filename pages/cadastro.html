@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Equipamentos</title>
+    <link rel="stylesheet" href="../assets/css/cadastro.css">
+
+    <!-- iconses boxicons  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="../assets/icones/logo.png" />
+
+    <!--Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="manifest" href="manifest.json" />
+    <script src="../assets/js/sheet.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <main>
+        <form method="POST" action="https://sheetdb.io/api/v1/p6bhrsr3e0f9q" name="controle-equipamentos "
+            id="controle-equipamentos">
+
+            <div class="header-form">
+                <input type="date" id="data-selecionada" name="data[DIA]" />
+                <h4><span id="dia-da-semana" for="data-selecionada"></span></h4>
+            </div>
+
+            <div class="card">
+                <div class="mb-3">
+                    <label for="" class="form-label">Tipo de Serviço</label>
+                    <select class="form-select" name="data[TIPO SERVIÇO]" id="tipo-serviço">
+                        <option selected value="INSTALAÇÃO">Instalação</option>
+                        <option value="REPARO">Reparo</option>
+                        <option value="M.E">Mudança de Endereço</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="mb-3">
+                    <label for="" class="form-label">Numero da Atividade</label>
+                    <input type="number" maxlength="9" class="form-control" name="data[ATIVIDADE]" id="atividade"
+                        required />
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="mb-3">
+                    <label for="" class="form-label">Terminal</label>
+                    <input type="number" class="form-control" name="data[TERMINAL]" id="terminal" maxlength="10"
+                        placeholder="" />
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="mb-3">
+                    <label for="" class="form-label">Endereço</label>
+                    <input type="text" class="form-control " name="data[ENDERECO]" id="endereco" placeholder="" />
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="mb-3 instalado">
+                    <label for="" class="form-label">Equipamento Instalado</label>
+                    <input type="text" class="form-control add" name="data[INSTALADO]" id="instalado" placeholder="" />
+                </div>
+                <button type="button" class="btn btn-outline-success" id="btn-adicionar">
+                    Adicionar outro Equipamento
+                </button>
+            </div>
+
+
+            <div class="card">
+                <div class="mb-3 retirada">
+
+                    <label for="" class="form-label" id="retirar">Equipamento Retirado</label>
+
+                    <input type="text" class="form-control remove" name="data[RETIRADO]" id="retirado" placeholder="" />
+                </div>
+
+                <button type="button" class="btn btn-outline-warning" id="btn-retirar">
+                    Retirar outro Equipamento
+                </button>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <section class="botoes">
+                <button type="button" class="btn btn-outline-danger" id="cancelar">Cancelar</button>
+                <button type="submit" class="btn btn-success" value="Enviar" id="enviar">Salvar</button>
+            </section>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>

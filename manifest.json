@@ -1,0 +1,55 @@
+{
+    "name": "Controle de Equipamentos",
+    "short_name": "Controle de Equipamentos",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "black",
+    "theme_color": "black",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "assets/icones/logo.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "assets/icones/logo.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "assets/icones/logo.png",
+            "type": "image/png",
+            "sizes": "120x120"
+        },
+        {
+            "src": "assets/icones/logo.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "assets/icones/logo.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+        
+    ],
+
+    "screenshots":[
+        {
+            "src": "assets/imagem/tela1.png",
+            "type": "image/png",
+            "sizes": "540x720",
+            "form_factor": "narrow"
+          },
+          {
+            "src": "assets/imagem/tela2.png",
+            "type": "image/png",
+            "sizes": "720x540",
+            "form_factor": "wide"
+          }
+        ]
+    
+
+    
+}
