@@ -1,6 +1,6 @@
 const loto = "controle-equipamentos-v1";
 const assets = [
-  "/",
+  "../",
   "index.html",
   "pages/cadastro.html",
   "assets/css/login.css/",
