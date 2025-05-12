@@ -5,7 +5,7 @@ function fazerLogin() {
   const pass = document.getElementById("senha").value;
 
   if (user === nome && pass === senha) {
-    window.location.href = "../pages/cadastro.html";
+    window.location.href = "../../pages/cadastro.html";
   } else {
     alert("Você não tem permissão para acessar esta página.");
   }
