@@ -1,35 +1,12 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-
 function fazerLogin() {
-  const firebaseConfig = {
-    apiKey: "AIzaSyCHdlxtVrVbly3_Hy6ewhgUMwV45OxJE7g",
-    authDomain: "equipamentos-e825a.firebaseapp.com",
-    projectId: "equipamentos-e825a",
-    storageBucket: "equipamentos-e825a.firebasestorage.app",
-    messagingSenderId: "415306494134",
-    appId: "1:415306494134:web:cad2d026744535f21d3617",
-  };
+  const nome = "Fagner02";
+  const senha = "@fagner02";
+  const user = document.getElementById("usuario").value;
+  const pass = document.getElementById("senha").value;
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-
-  const email = document.getElementById("usuario").value;
-  const senha = document.getElementById("senha").value;
-
-  signInWithEmailAndPassword(email, senha)
-    .then((userCredential) => {
-      console.log("Login realizado com sucesso!", userCredential.user);
-      alert("Login bem-sucedido!");
-    })
-    .catch((error) => {
-      console.error("Erro ao fazer login:", error.message);
-      alert("Erro ao autenticar. Verifique suas credenciais.");
-    });
+  if (user === nome && pass === senha) {
+    window.location.href = "/pages/cadastro.html";
+  } else {
+    alert("Você não tem permissão para acessar esta página.");
+  }
 }
-
-document.getElementById("btn-login").addEventListener("click", function (e) {
-  e.preventDefault();
-  fazerLogin();
-});
