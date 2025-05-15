@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const ano = dataAtual.getFullYear();
   const mes = String(dataAtual.getMonth() + 1).padStart(2, "0");
   const dia = String(dataAtual.getDate()).padStart(2, "0");
-  inputData.value = `${ano}-${mes}-${dia}`;
+  inputData.value = `${dia}/${mes}/${ano}`;
   let diasDaSemana = [
     "Domingo",
     "Segunda-feira",
