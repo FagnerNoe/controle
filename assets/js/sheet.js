@@ -25,12 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
   diaDaSemana.textContent = diasDaSemana[diaDaSemanaAtual];
 
   inputData.addEventListener("change", () => {
-    const data = new Date(inputData.value);
-    const dia = data.getUTCDay();
-
-    diaDaSemana.textContent = diasDaSemana[dia];
-
-    console.log(dia);
+    const partesData = inputData.value.split("/");
+    if (partesData.length !== 3) {
+      const data = new Date(
+        `${partesData[2]} - ${partesData[1]} - ${partesData[0]}`
+      );
+      const dia = data.getUTCDay();
+      diaDaSemana.textContent = diasDaSemana[dia];
+      console.log(dia);
+    }
   });
 
   form.addEventListener("submit", function (e) {
