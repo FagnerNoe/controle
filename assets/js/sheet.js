@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const ano = dataAtual.getFullYear();
   const mes = String(dataAtual.getMonth() + 1).padStart(2, "0");
   const dia = String(dataAtual.getDate()).padStart(2, "0");
-  inputData.value = `${dia}/${mes}/${ano}`;
+
+  inputData.value = `${ano}-${mes}-${dia}`;
   let diasDaSemana = [
     "Domingo",
     "Segunda-feira",
@@ -25,15 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
   diaDaSemana.textContent = diasDaSemana[diaDaSemanaAtual];
 
   inputData.addEventListener("change", () => {
-    const partesData = inputData.value.split("/");
-    if (partesData.length !== 3) {
-      const data = new Date(
-        `${partesData[2]} - ${partesData[1]} - ${partesData[0]}`
-      );
-      const dia = data.getUTCDay();
-      diaDaSemana.textContent = diasDaSemana[dia];
-      console.log(dia);
-    }
+    const data = new Date(inputData.value);
+    const dia = data.getUTCDay();
+
+    diaDaSemana.textContent = diasDaSemana[dia];
+    console.log(data);
+    console.log(dia);
   });
 
   form.addEventListener("submit", function (e) {
